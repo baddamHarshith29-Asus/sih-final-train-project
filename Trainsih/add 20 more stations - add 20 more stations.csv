@@ -1,0 +1,31 @@
+Station Code,Station Name,Platform Count,Track Availability,Halt Time (mins)
+HYB,Hyderabad Deccan (Nampally),10,Y,5
+KCG,Kacheguda Junction,6,Y,3
+SC,Secunderabad Junction,8,Y,5
+BZA,Vijayawada Junction,10,Y,6
+RJY,Rajahmundry,6,Y,4
+SLO,Samalkot Junction,4,Y,3
+VSKP,Visakhapatnam Junction,12,Y,7
+VZM,Vizianagaram Junction,6,Y,5
+CSMT,Mumbai CSMT,18,Y,10
+KRNT,Kurnool Town,5,Y,6
+NDLS,New Delhi,16,Y,10
+HWH,Howrah Junction,23,Y,15
+CNB,Kanpur Central,10,Y,5
+PNBE,Patna Junction,10,Y,5
+KYN,Kalyan Junction,8,Y,5
+PRYJ,Prayagraj Junction,10,Y,5
+ET,Itarsi Junction,7,Y,5
+BRC,Vadodara Junction,7,Y,5
+LKO,Lucknow Charbagh,9,Y,5
+BPL,Bhopal Junction,6,Y,5
+NGP,Nagpur Junction,8,Y,5
+JP,Jaipur Junction,7,Y,5
+MAS,Chennai Central,17,Y,10
+SBC,Bangalore City,10,Y,5
+PUNE,Pune Junction,6,Y,5
+ADI,Ahmedabad Junction,12,Y,5
+ST,Surat,4,Y,5
+BSB,Varanasi Junction,9,Y,5
+AGC,Agra Cantt,6,Y,5
+JHS,Jhansi Junction,7,Y,5

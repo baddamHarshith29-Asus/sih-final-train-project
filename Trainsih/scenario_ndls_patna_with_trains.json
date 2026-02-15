@@ -1,0 +1,59 @@
+{
+  "trains": [
+    {
+      "train_id": "NDLS-PNBE-EXP",
+      "name": "New Delhi - Patna Express",
+      "train_type": "Passenger",
+      "priority_level": "High",
+      "speed_kmph": 80,
+      "length_m": 550,
+      "sched_departure": "06:00",
+      "sched_arrival": "16:00",
+      "source": "New Delhi",
+      "destination": "Patna Jn",
+      "route_path": ["New Delhi", "Ghaziabad", "Kanpur Central", "Prayagraj", "Patna Jn"]
+    },
+    {
+      "train_id": "NDLS-PNBE-ALT",
+      "name": "NDLS-Patna Alt Passenger",
+      "train_type": "Passenger",
+      "priority_level": "Medium",
+      "speed_kmph": 80,
+      "length_m": 550,
+      "sched_departure": "06:10",
+      "sched_arrival": "16:30",
+      "source": "New Delhi",
+      "destination": "Patna Jn",
+      "route_path": ["New Delhi", "Kanpur Central", "Patna Jn"]
+    }
+  ],
+  "sections": [
+    {"from_node": "New Delhi", "to_node": "Ghaziabad", "travel_time_min": 20.0, "availability": "double", "section_capacity": 2, "signalling": "CTC"},
+    {"from_node": "Ghaziabad", "to_node": "Kanpur Central", "travel_time_min": 240.0, "availability": "double", "section_capacity": 2, "signalling": "CTC"},
+    {"from_node": "Kanpur Central", "to_node": "Prayagraj", "travel_time_min": 120.0, "availability": "double", "section_capacity": 2, "signalling": "CTC"},
+    {"from_node": "Prayagraj", "to_node": "Patna Jn", "travel_time_min": 240.0, "availability": "double", "section_capacity": 2, "signalling": "CTC"},
+    {"from_node": "New Delhi", "to_node": "Kanpur Central", "travel_time_min": 250.0, "availability": "loop", "section_capacity": 2, "signalling": "CTC"},
+    {"from_node": "Kanpur Central", "to_node": "Patna Jn", "travel_time_min": 300.0, "availability": "loop", "section_capacity": 2, "signalling": "CTC"}
+  ],
+  "stations": [
+    {"station_id": "New Delhi", "platform_count": 12, "platform_length_m": 600, "halt_time_min": 2.0, "station_priority": "major_junction"},
+    {"station_id": "Ghaziabad", "platform_count": 4, "platform_length_m": 600, "halt_time_min": 2.0, "station_priority": "small_station"},
+    {"station_id": "Kanpur Central", "platform_count": 8, "platform_length_m": 650, "halt_time_min": 2.0, "station_priority": "major_junction"},
+    {"station_id": "Prayagraj", "platform_count": 6, "platform_length_m": 600, "halt_time_min": 2.0, "station_priority": "major_junction"},
+    {"station_id": "Patna Jn", "platform_count": 8, "platform_length_m": 650, "halt_time_min": 0.0, "station_priority": "major_junction"}
+  ],
+  "constraints": {
+    "min_headway_min": 5.0,
+    "allow_overtake": true,
+    "crossing_rule": "passenger_first",
+    "track_conflict_rule": "single_line_opposite_forbidden"
+  },
+  "simulation": {
+    "simulation_speed": "fast",
+    "num_trains": 2,
+    "scenario_type": "normal",
+    "optimization_goal": "prioritize_passenger"
+  }
+}
+
+
