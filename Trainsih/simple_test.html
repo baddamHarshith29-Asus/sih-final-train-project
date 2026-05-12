@@ -30,9 +30,15 @@
         </select>
     </div>
     
-    <button onclick="runAI()">Run AI Analysis</button>
+    <div style="margin-top: 10px; padding: 10px; background: #e0e0e0; border-radius: 5px;">
+        <label>Backend URL: </label>
+        <input id="backend_url" value="http://localhost:5000" style="width: 300px;">
+        <small>(Change this to your Render/Heroku URL after deployment)</small>
+    </div>
+
+    <button onclick="runAI()" style="margin-top: 20px; padding: 10px 20px; background: #2ecc71; color: white; border: none; border-radius: 5px; cursor: pointer;">Run AI Analysis</button>
     
-    <div id="output" style="margin-top: 20px; padding: 10px; background: #f0f0f0;"></div>
+    <div id="output" style="margin-top: 20px; padding: 15px; background: #f0f0f0; border-radius: 5px; border: 1px solid #ddd; min-height: 100px;"></div>
 
     <script>
         async function runAI() {
@@ -87,9 +93,10 @@
             };
 
             try {
+                const backendUrl = document.getElementById('backend_url').value.replace(/\/$/, '');
                 console.log('Sending to backend:', scenario);
                 
-                const response = await fetch('http://localhost:5000/analyze_scenario', {
+                const response = await fetch(`${backendUrl}/analyze_scenario`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
